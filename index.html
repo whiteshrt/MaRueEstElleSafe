@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/client/style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <title>Ma rue est elle safe ?</title>
+  </head>
+  <body>
+    <script type="module" src="/src/client/main.js"></script>
+
+    <div class="container">
+      <h1 class="title"> Ma rue est elle safe ?</h1>
+      <form id="input-rue">
+        <input type="text" id="rue" name="rue" required>
+        <button type="submit">Rechercher</button>
+      </form>
+      <span id="lampadaires"></span>
+      <span id="ratio"></span>
+      <span id="security"></span>
+      <span id="delitsCrimes"></span>
+      <span id="freqVoie"></span>
+
+      <div id="result"></div>
+      <div class="preload">
+        <div class="emoji">🕐</div>
+      </div>
+    </div>
+    <div id="map"></div>
+
+
+<script>
+
+  const loader = document.querySelector('.preload');
+  const emoji = loader.querySelector('.emoji');
+
+  const emojis = ["🕐", "🕜", "🕑","🕝", "🕒", "🕞", "🕓", "🕟", "🕔", "🕠", "🕕", "🕡", "🕖", "🕢",  "🕗", "🕣", "🕘", "🕤", "🕙",  "🕥", "🕚", "🕦",  "🕛", "🕧"];
+
+  const interval = 125;
+
+  const loadEmojis = (arr) => {
+    setInterval(() => {
+      emoji.innerText = arr[Math.floor(Math.random() * arr.length)];
+      //console.log(Math.floor(Math.random() * arr.length))
+    }, interval);
+  }
+
+  const init = () => {
+    loadEmojis(emojis);
+  }
+  init();
+
+</script>
+    <script
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDP4GgZMLasVRTeXycCU1U-BhVfkmcVnek&callback=initMap&libraries=places&v=weekly"
+            defer
+    ></script>
+
+  </body>
+</html>

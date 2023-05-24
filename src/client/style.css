@@ -1,0 +1,149 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+body {
+    background-color: #23263b;
+
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+h1, span, form, button, input {
+    color: #ecf0f1;
+}
+
+#map {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 450px;
+    width: 700px;
+    margin-top: -70px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+
+}
+
+#lampadaires {
+    padding: 15px;
+    margin-left: -10px;
+    margin-top: 10px;
+}
+
+#delitsCrimes {
+    padding: 15px;
+    margin-left: -10px;
+    margin-top: 10px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+}
+
+input {
+
+
+    box-shadow: inset #abacaf 0 0 0 2px;
+    border: 0;
+    background: rgba(0, 0, 0, 0);
+    appearance: none;
+    width: 100%;
+    position: relative;
+    border-radius: 3px;
+    padding: 9px 12px;
+    line-height: 1.4;
+    color: #abacaf;
+    font-size: 16px;
+    font-weight: 400;
+    height: 40px;
+    transition: all .2s ease;
+
+}
+
+button {
+    margin-left: 10px;
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 3px;
+    padding: 12px 24px;
+    border: 0;
+    color: #3a4149;
+    background: #e7ebee;
+    line-height: 1.15;
+    font-size: 16px;
+
+
+}
+
+
+input:hover {
+
+    box-shadow: 0 0 0 0 #fff inset, #1de9b6 0 0 0 2px;
+}
+
+input:focus {
+    background: #fff;
+    color: rgb(0, 0, 0);
+    outline: 0;
+    box-shadow: 0 0 0 0 #fff inset, #1de9b6 0 0 0 3px;
+}
+
+button:hover {
+    transition: all .3s ease;
+    box-shadow: 0 0 0 0 #fff, 0 0 0 3px #1de9b6;
+}
+
+.title {
+    font-weight: bold;
+    display: inline-block;
+    padding: 3px;
+    margin-right: 5px;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    overflow: hidden;
+}
+
+.title:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 51%;
+    right: 51%;
+    bottom: 0;
+    background: #1de9b6;
+    height: 4px;
+    -webkit-transition-property: left, right;
+    transition-property: left, right;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.5s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+.title:hover:before, .title:focus:before, .title:active:before {
+    left: 0;
+    right: 0;
+}
+
+.preload {
+    display: block;
+    font-size: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -10px;
+}
